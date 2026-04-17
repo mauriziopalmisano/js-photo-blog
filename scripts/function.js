@@ -1,2 +1,4 @@
-//@ts-check
 'use strict';
+function polaroidRender(array) {
+    
+}

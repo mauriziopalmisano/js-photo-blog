@@ -1,8 +1,55 @@
 /*Reset*/
-*{
+* {
     border: 0;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    overflow: hidden;
 }
+
+body {
+    font-family: "Edu TAS Beginner", cursive;
+}
+
+
+
+.date-font {
+    font-family: "Sometype Mono", monospace;
+}
+
+.header-title {
+    font-weight: 800;
+    font-size: 64px;
+}
+
+.bg-img-head {
+    background-image:
+        url('/img/wall.png');
+}
+
+.bg-img-main {
+    background-image:
+        url('/img/cork.png');
+}
+
+.bg-set {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.polaroid {
+    background-color: white;
+    padding: 15px 15px 30px 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.pin-polaroid {
+    width: 40px;
+    height: auto;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%); 
+    }
