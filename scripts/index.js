@@ -1,4 +1,3 @@
-//@ts-check
 'use strict';
 const apiPosts = 'https://lanciweb.github.io/demo/api/pictures/';
 const polaroidWallElem = document.querySelector('#polaroid-wall');
@@ -10,9 +9,10 @@ fetch(apiPosts)
     })
     .then((json) => {
         console.log(json);
-        if (polaroidWallElem !== null) {
-            polaroidWallElem.innerHTML = polaroidRender(json);
-        }
+        json.forEach(post => {
+            const polaroid = polaroidAssembler(post);
+            polaroidWallElem.appendChild(polaroid);
+        })
     })
     .catch((error) => {
         console.error(error);
