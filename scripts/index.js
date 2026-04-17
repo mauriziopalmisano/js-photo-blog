@@ -9,8 +9,13 @@ fetch(apiPosts)
     })
     .then((json) => {
         console.log(json);
-        json.forEach(post => {
-            const polaroid = polaroidAssembler(post);
+        json.forEach((post, index) => {
+            const polaroid = polaroidAssembler(post, index);
+            console.log(polaroid);
+            polaroid.addEventListener('click', function () {
+                const id = this.dataset.id;
+                console.log(`Hai cliccato la card numero ${id}`);
+            });
             polaroidWallElem.appendChild(polaroid);
         })
     })

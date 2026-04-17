@@ -1,7 +1,8 @@
 'use strict';
-function polaroidAssembler(polaroidData) {
+function polaroidAssembler(polaroidData, index) {
     const col = document.createElement('div');
     col.className = 'col-12 col-md-6 col-lg-4 mb-4';
+    col.dataset.id = index;
     
     const polaroid = document.createElement('div');
     polaroid.className = 'polaroid';
