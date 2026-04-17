@@ -10,7 +10,9 @@ fetch(apiPosts)
     })
     .then((json) => {
         console.log(json);
-        polaroidRender(json);
+        if (polaroidWallElem !== null) {
+            polaroidWallElem.innerHTML = polaroidRender(json);
+        }
     })
     .catch((error) => {
         console.error(error);
