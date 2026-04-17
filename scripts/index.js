@@ -11,11 +11,12 @@ fetch(apiPosts)
         console.log(json);
         json.forEach((post, index) => {
             const polaroid = polaroidAssembler(post, index);
-            console.log(polaroid);
-            polaroid.addEventListener('click', function () {
-                const id = this.dataset.id;
-                console.log(`Hai cliccato la card numero ${id}`);
-            });
+            // console.log(polaroid); //test per vedere se la polaroid veniva creata correttamente
+            // polaroid.addEventListener('click', function (    // usato solo per vedere se la mia logica funzionava con un eventlistener messo sulla card
+            // ) {
+            //     const id = this.dataset.id;
+            //     console.log(`Hai cliccato la card numero ${id}`);
+            // });
             polaroidWallElem.appendChild(polaroid);
         })
     })
