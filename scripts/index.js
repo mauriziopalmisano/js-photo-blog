@@ -8,7 +8,6 @@ fetch(apiPosts)
         return response.json();
     })
     .then((json) => {
-        console.log(json);
         json.forEach((post, index) => {
             const polaroid = polaroidAssembler(post, index);
             // console.log(polaroid); //test per vedere se la polaroid veniva creata correttamente

@@ -65,7 +65,7 @@ da avere il focus dell'utente sull'immagine*/
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 99;
+    z-index: 99; /*per essere sicuro che l'overlay sia sopra a tutto*/
 }
 /*ci serve per far si che l'immagine prenda quasi tutta la grandezza dello schermo*/
 .overlay-img {
@@ -74,7 +74,7 @@ da avere il focus dell'utente sull'immagine*/
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     border: 5px solid white;
     border-radius: 4px;
-    animation: zoomIn 0.3s ease;
+    animation: zoomIn 0.3s ease; /*gestisce la velocita dell'animazione*/
 }
 
 /*serve per creare un animazione dell'immagine quando viene creata, non posso farlo anche per la chiusura dato che 
@@ -99,6 +99,8 @@ anche perché non sapevo come gestirlo per posizionarlo come volevo*/
     font-weight: bold;
     cursor: pointer;
     display: flex;
+    /*anche se o usato la flex la maledetta X non vuole stare al centro e creso si per via del 
+    fatto che il caratteri occupino piú di quel che si vede*/
     justify-content: center;
-    align-items: center;
+    align-items: center; 
 }
