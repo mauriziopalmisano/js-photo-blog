@@ -66,7 +66,6 @@ function polaroidAssembler(polaroidData, index) {
 
 
 function openOverlay(imageSrc) {
-
     const overlay = document.createElement('div');
     overlay.className = 'custom-overlay';
 
@@ -76,13 +75,15 @@ function openOverlay(imageSrc) {
 
     const closeBtn = document.createElement('button');
     closeBtn.className = 'close-btn';
-    closeBtn.innerHTML = '&times;';
+    closeBtn.innerHTML = '<i class="bi bi-x-circle text-white"></i>';
 
     closeBtn.addEventListener('click', (event) => {
         overlay.remove();
+        document.body.classList.remove('overflow-hidden');
     });
 
     overlay.append(bigImg, closeBtn);
 
     document.body.appendChild(overlay);
+    document.body.classList.add('overflow-hidden');
 }

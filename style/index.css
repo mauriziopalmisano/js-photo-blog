@@ -8,9 +8,16 @@
 
 body {
     font-family: "Edu TAS Beginner", cursive;
+    overflow-x: hidden;
 }
 
+.padding{
+    padding: 80px;
+}
 
+.text-white{
+    color: white;
+}
 
 .date-font {
     font-family: "Sometype Mono", monospace;
@@ -43,6 +50,7 @@ body {
     padding: 15px 15px 30px 15px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
     position: relative;
+    transition: all 0.3s;
 }
 
 .pin-polaroid {
@@ -74,7 +82,7 @@ da avere il focus dell'utente sull'immagine*/
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     border: 5px solid white;
     border-radius: 4px;
-    animation: zoomIn 0.3s ease; /*gestisce la velocita dell'animazione*/
+    animation: zoomIn 0.4s ease; /*gestisce la velocita dell'animazione*/
 }
 
 /*serve per creare un animazione dell'immagine quando viene creata, non posso farlo anche per la chiusura dato che 
@@ -84,23 +92,29 @@ l'intero overlay viene rimosso alla chiusura*/
     to { transform: scale(1); opacity: 1; }
 }
 
-/*il bottone lo so che é brutto ma non volevo 'sminchiare' tutto usando i bottoni di bootstrap
-anche perché non sapevo come gestirlo per posizionarlo come volevo*/
+
 .close-btn {
     position: absolute;
+    background-color: transparent;
     top: 20px;
     right: 20px;
-    background: white;
     border: none;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 5px;
+    height: 5px;
     font-size: 24px;
     font-weight: bold;
     cursor: pointer;
     display: flex;
-    /*anche se o usato la flex la maledetta X non vuole stare al centro e creso si per via del 
-    fatto che il caratteri occupino piú di quel che si vede*/
     justify-content: center;
     align-items: center; 
+}
+
+
+.polaroid:hover{
+    rotate: 30deg;
+    z-index: 10;
+    .pin-polaroid{
+        display: none;
+    }
 }
